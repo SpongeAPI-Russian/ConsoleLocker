@@ -70,7 +70,6 @@ public class ConsoleLock {
             serializers.registerType(TypeToken.of(Locale.class), new LocaleSerializer());
             CommentedConfigurationNode rootNode = configLoader.load(defaults.setSerializers(serializers));
             Config tmp = rootNode.getValue(TypeToken.of(Config.class), config);
-            configLoader.save(rootNode);
             if(tmp == config) {
                 logger.warn(config.getResourceBundle().getString("password.notFound"));
             } else {
@@ -80,6 +79,7 @@ public class ConsoleLock {
             logger.warn(config.getResourceBundle().getString("config.error"), e);
         }
         this.config = config;
+        this.locked = config.getPassword().length == 32;
     }
 
     @Listener
