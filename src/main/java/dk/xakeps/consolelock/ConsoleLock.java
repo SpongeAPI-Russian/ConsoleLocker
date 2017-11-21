@@ -53,7 +53,7 @@ public class ConsoleLock {
                        @DefaultConfig(sharedRoot = false) Path configPath,
                        PluginContainer container)
             throws NoSuchAlgorithmException {
-        saveFile(container, "lang.properties", pluginDir);
+        saveFile(container, "lang_en.properties", pluginDir);
         saveFile(container, "lang_ru.properties", pluginDir);
         saveFile(container, "console-lock.conf", pluginDir);
 
