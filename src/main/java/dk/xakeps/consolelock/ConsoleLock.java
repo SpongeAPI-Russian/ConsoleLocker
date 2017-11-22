@@ -35,7 +35,7 @@ import java.util.*;
 
 @Plugin(id = "console-lock",
         name = "Console locker",
-        version = "1.1.1",
+        version = "1.2",
         description = "Locks console with specific password",
         url = "https://spongeapi.com",
         authors = "Xakep_SDK")
