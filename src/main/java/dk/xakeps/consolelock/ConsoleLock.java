@@ -35,7 +35,7 @@ import java.util.*;
 
 @Plugin(id = "console-lock",
         name = "Console locker",
-        version = "1.1",
+        version = "1.2",
         description = "Locks console with specific password",
         url = "https://spongeapi.com",
         authors = "Xakep_SDK")
@@ -53,7 +53,7 @@ public class ConsoleLock {
                        @DefaultConfig(sharedRoot = false) Path configPath,
                        PluginContainer container)
             throws NoSuchAlgorithmException {
-        saveFile(container, "lang.properties", pluginDir);
+        saveFile(container, "lang_en.properties", pluginDir);
         saveFile(container, "lang_ru.properties", pluginDir);
         saveFile(container, "console-lock.conf", pluginDir);
 
